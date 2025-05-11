@@ -1,0 +1,5 @@
+module hdmi_i2c_ctrl(
+  inout sda,
+  output scl,
+  
+);
