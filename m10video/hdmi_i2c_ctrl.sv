@@ -15,7 +15,7 @@ localparam bit[23:0] adv_config[0:14] = '{
   // config (5)
   'h15_0f_00, // RGB 4:4:4 mode
   'h16_b0_30, // 4:4:4 output, 8b per channel
-  'h17_02_02, // 16:9 mode
+  'h17_02_00, // 16:9 mode
   'h18_80_00, // CSC disable
   'haf_02_02, // HDMI mode
   // extra config (1) (not quickstart)
@@ -120,7 +120,7 @@ module hdmi_i2c_ctrl(
               state <= READY;
             end
           end else begin
-            cmd_ctr <= cmd_ctr + 9'b1;
+            cmd_ctr <= cmd_ctr + 8'b1;
           end
         end else begin
           xact_ctr <= xact_ctr + 7'b1;

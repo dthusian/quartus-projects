@@ -18,6 +18,17 @@ module clkdiv256(
   end
 endmodule
 
+module clkdiv2(
+  input logic clk_in,
+  output logic clk_out
+);
+  logic clk;
+  assign clk_out = clk;
+  always_ff @(posedge clk_in) begin
+    clk = ~clk;
+  end
+endmodule
+
 module m10video_top(
   //Reset and Clocks
   input           max10_resetn,
@@ -72,4 +83,16 @@ module m10video_top(
   assign user_led[3] = ~hdmi_waiting_hpd;
   assign user_led[4] = ~hdmi_waiting_pwron;
 
+  // Video Generator
+  logic vid_clk;
+  clkdiv2 vid_clkgen(clk50m_max10, vid_clk);
+  videogen vid_gen(
+    .clk(vid_clk),
+    .resetn(max10_resetn && hdmi_ready),
+    .data(hdmi_video_din),
+    .hsync(hdmi_hsync),
+    .vsync(hdmi_vsync),
+    .data_en(hdmi_video_data_en)
+  );
+  assign hdmi_video_clk = vid_clk;
 endmodule

@@ -2,7 +2,7 @@
   <display_tree gui_logging_enabled="0">
     <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
-  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+  <instance enabled="false" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <signal_set is_expanded="true" name="signal_set: 2025/05/11 14:25:10  #0">
       <clock name="clkdiv64:i2c_clkgen|ctr[5]" polarity="posedge" tap_mode="probeonly"/>
@@ -38,13 +38,11 @@
         <trigger_in_editor/>
         <trigger_out_editor/>
       </presentation>
-      <trigger attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2025/05/11 14:25:10  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+      <trigger attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2025/05/11 14:25:10  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">
-            <power_up enabled="yes">
-            </power_up>
-            <op_node/>
+          <level enabled="yes" name="condition1" type="basic"><power_up enabled="yes">
+            </power_up><op_node/>
           </level>
         </events>
         <storage_qualifier_events>
@@ -301,13 +299,11 @@
         <trigger_in_editor bit_condition="falling edge" is_enabled="true" is_hps_event_selected="false" is_hps_trigger_in_selected="false" is_node_post_fitting="true" is_node_selected="true" is_pin_selected="false" node_name="hdmi_sda" pin_name="auto_stp_trigger_in_auto_signaltap_0"/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="B55A269A" attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2025/05/11 15:33:36  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="falling edge" trigger_type="circular">
+      <trigger CRC="B55A269A" attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2025/05/11 15:33:36  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="falling edge" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="high"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">
-            <power_up enabled="yes">
-            </power_up>
-            <op_node/>
+          <level enabled="yes" name="condition1" type="basic"><power_up enabled="yes">
+            </power_up><op_node/>
           </level>
         </events>
         <storage_qualifier_events>
@@ -574,7 +570,7 @@
         <trigger_in_editor bit_condition="rising edge" is_enabled="true" is_hps_event_selected="false" is_hps_trigger_in_selected="false" is_node_post_fitting="false" is_node_selected="true" is_pin_selected="false" node_name="hdmi_i2c_ctrl:i2c_ctrl|state[1]" pin_name="auto_stp_trigger_in_auto_signaltap_0"/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="49CADDF8" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2025/05/11 16:51:28  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="rising edge" trigger_type="circular">
+      <trigger CRC="49CADDF8" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2025/05/11 16:51:28  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="rising edge" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="high"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">
